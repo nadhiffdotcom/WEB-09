@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website informasi wisata Kambo Highland, dataran tinggi di Palopo, Sulawesi Selatan.">
+    <title>Kambo Highland Palopo | Website Informasi Wisata</title>
+
+    <style>
+        
+        /*ELEMENT SELECTOR*/
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f6f4;
+            color: #333;
+            line-height: 1.6;
+
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+
+        h2 {
+            color: #245c4a;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #36735e;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /*HEADER*/
+
+        header {
+            background-color: #05277f;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 5px solid #fa0505;
+        }
+
+        header p {
+            margin-top: 10px;
+        }
+
+        /*NAVIGASI*/
+
+        nav {
+            background-color: #ffffff;
+            padding: 18px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #245c4a;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        /* PSEUDO-CLASS SELECTOR */
+        nav a:hover {
+            color: #1e088e;
+            text-decoration: underline;
+        }
+
+        /*MAIN */
+
+        main {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /*CLASS SELECTOR*/
+
+        .section-box {
+            background-color: white;
+            margin-bottom: 30px;
+            padding: 30px;
+            border: 1px solid #dfe5e1;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-title {
+            border-left: 6px solid #1b0ad1;
+            padding-left: 12px;
+        }
+
+        /*ID SELECTOR*/
+
+        #tentang {
+            background-color: #ffffff;
+        }
+
+        #lokasi {
+            background-color: #eef5f1;
+        }
+
+        #multimedia {
+            background-color: #ffffff;
+        }
+
+        /*TENTANG*/
+
+        .tentang-container {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .tentang-text {
+            flex: 2;
+        }
+
+        aside {
+            flex: 1;
+            background-color: #eef5f1;
+            padding: 20px;
+            border: 2px solid #c9ddd4;
+            border-radius: 10px;
+        }
+
+        aside ul {
+            padding-left: 20px;
+        }
+
+        /*GALERI*/
+
+        .gallery-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        figure {
+            flex: 1;
+            min-width: 250px;
+            max-width: 320px;
+            margin: 0;
+            padding: 12px;
+            background-color: #f8faf9;
+            border: 1px solid #dfe5e1;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        figure img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /*AKTIVITAS*/
+
+        .activity-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .activity-list,
+        .route-list {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8faf9;
+            padding: 20px;
+            border: 1px solid #dfe5e1;
+            border-radius: 10px;
+        }
+
+        .activity-list li,
+        .route-list li {
+            margin-bottom: 10px;
+        }
+
+        /*LOKASI*/
+
+        .location-info {
+            padding: 20px;
+            border-left: 5px solid #245c4a;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 700px;
+            height: 400px;
+            border: 0;
+            border-radius: 10px;
+        }
+
+        /*TABEL*/
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+        }
+
+        caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #245c4a;
+        }
+
+        th,
+        td {
+            border: 1px solid #cfd8d3;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #fa0505;
+            color: white;
+        }
+
+            background-color: #f2f6f4;
+        }
+
+        /*FORM*/
+
+        form {
+            background-color: #f8faf9;
+            padding: 25px;
+            border: 1px solid #dfe5e1;
+            border-radius: 10px;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 2px solid #c9ddd4;
+            border-radius: 10px;
+        }
+
+        legend {
+            color: #245c4a;
+            font-weight: bold;
+            padding: 0 8px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 12px;
+            border: 1px solid #bfcac4;
+            border-radius: 6px;
+            font-family: Arial, sans-serif;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            width: auto;
+            background-color: #fa0505;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* PSEUDO-CLASS */
+        input[type="submit"]:hover {
+            background-color: #380bea;
+        }
+
+        /*MULTIMEDIA*/
+
+        .media-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .media-box {
+            flex: 1;
+            min-width: 280px;
+            padding: 20px;
+            border: 1px solid #dfe5e1;
+            border-radius: 10px;
+            background-color: #f8faf9;
+        }
+
+        video {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+        }
+
+        audio {
+            width: 100%;
+        }
+
+        /*FOOTER*/
+
+        footer {
+            background-color: #05277f;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 30px;
+            border-top: 5px solid #fa0505;
+        }
+
+        footer p {
+            margin: 8px 0;
+        }
+
+        /*RESPONSIVE DESIGN*/
+
+        @media (max-width: 768px) {
+
+            h1 {
+                font-size: 32px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+            }
+
+            .tentang-container {
+                flex-direction: column;
+            }
+
+            .gallery-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            figure {
+                width: 100%;
+            }
+
+            .activity-container {
+                flex-direction: column;
+            }
+
+            .media-container {
+                flex-direction: column;
+            }
+
+            .section-box {
+                padding: 20px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            th,
+            td {
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            header {
+                padding: 35px 15px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            main {
+                padding: 0 10px;
+            }
+
+            .section-box {
+                padding: 15px;
+            }
+
+            nav {
+                position: static;
+            }
+
+            nav a {
+                display: block;
+                margin: 8px 0;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            th,
+            td {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Kambo Highland</h1>
+        <p><em>"Negeri di Atas Awan"</em> - Palopo, Sulawesi Selatan, Indonesia</p>
+    </header>
+
+    <!-- NAVIGASI -->
+    <nav>
+        <a href="#tentang">Tentang</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#aktivitas">Aktivitas</a>
+        <a href="#lokasi">Lokasi</a>
+        <a href="#informasi">Info Wisata</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+
+    <main>
+
+        <!-- INFORMASI UTAMA -->
+        <section id="tentang" class="section-box">
+
+            <h2 class="section-title">Tentang Kambo Highland</h2>
+
+            <div class="tentang-container">
+
+                <article class="tentang-text">
+
+                    <p>
+                        Kambo Highland adalah kawasan dataran tinggi yang terletak di Kota Palopo,
+                        Sulawesi Selatan. Destinasi ini menawarkan pemandangan perbukitan hijau,
+                        hamparan kabut pagi, dan udara sejuk khas pegunungan yang menjadi pilihan
+                        favorit wisatawan untuk melepas penat dari suasana perkotaan.
+                    </p>
+
+                    <p>
+                        Kawasan ini menyuguhkan spot foto ikonik berupa jembatan kayu di atas
+                        tebing, gardu pandang, serta area perkemahan yang dikelilingi pepohonan.
+                        Kambo Highland dikenal dengan udara sejuknya sepanjang tahun,
+                        sehingga cocok untuk liburan keluarga maupun solo traveling.
+                    </p>
+
+                </article>
+
+                <aside>
+                    <h3>Sekilas Fakta</h3>
+
+                    <ul>
+                        <li>
+                            <strong>Lokasi:</strong>
+                            Jalan Poros Kambo - Battang,
+                            Kelurahan Kambo, Kecamatan Mungkajang,
+                            Kota Palopo, Sulawesi Selatan.
+                        </li>
+
+                        <li>
+                            <strong>Ketinggian:</strong>
+                            ± 1.200 mdpl
+                        </li>
+
+                        <li>
+                            <strong>Suhu rata-rata:</strong>
+                            17-23°C
+                        </li>
+
+                        <li>
+                            <strong>Waktu terbaik berkunjung:</strong>
+                            Pagi hari, musim durian &amp; musim kemarau
+                        </li>
+                    </ul>
+                </aside>
+
+            </div>
+        </section>
+
+
+        <!-- GALERI -->
+        <section id="galeri" class="section-box">
+
+            <h2 class="section-title">Galeri Foto</h2>
+
+            <div class="gallery-container">
+
+                <figure>
+                    <img src="kambo1.jpg"
+                         alt="Pemandangan Kambo Highland Palopo saat pagi hari">
+                    <figcaption>
+                        Pemandangan Kambo Highland saat pagi hari
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="kambo2.jpg"
+                         alt="Kambo Highland dari atas">
+                    <figcaption>
+                        Kambo Highland dari atas
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="kambo3.jpg"
+                         alt="Cafe yang ada di Kambo Highland Palopo">
+                    <figcaption>
+                        Cafe &amp; resto yang ada di Kambo Highland
+                    </figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+
+        <!-- AKTIVITAS -->
+        <section id="aktivitas" class="section-box">
+
+            <h2 class="section-title">Daftar Aktivitas</h2>
+
+            <div class="activity-container">
+
+                <div class="activity-list">
+
+                    <h3>Aktivitas Wisata</h3>
+
+                    <ul>
+                        <li>
+                            <strong>Trekking</strong> -
+                            menyusuri jalur setapak menuju puncak bukit.
+                        </li>
+
+                        <li>
+                            <strong>Berkemah (Camping)</strong> -
+                            bermalam di area camping ground.
+                        </li>
+
+                        <li>
+                            <strong>Berburu Foto</strong> -
+                            mengabadikan momen di berbagai spot
+                            yang ada di Kambo Highland.
+                        </li>
+
+                        <li>
+                            <strong>Menikmati Sunrise &amp; Sunset</strong> -
+                            dari titik tertinggi kawasan.
+                        </li>
+
+                        <li>
+                            <strong>Piknik Keluarga</strong> -
+                            di area taman terbuka.
+                        </li>
+
+                        <li>
+                            <strong>Berenang</strong> -
+                            menikmati kolam renang outdoor
+                            dengan latar belakang perbukitan hijau.
+                        </li>
+
+                        <li>
+                            <strong>Kulineran di Kambo Mountain Cafe &amp; Resto</strong> -
+                            menikmati berbagai hidangan dan minuman khas.
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="route-list">
+
+                    <h3>Urutan Rute Trekking</h3>
+
+                    <ol>
+                        <li>Pos Registrasi &amp; Parkir</li>
+                        <li>Gerbang Masuk Kawasan</li>
+                        <li>Cafe &amp; Resto</li>
+                        <li>Berbagai Villa Kambo Highland</li>
+                        <li>Puncak Kambo Highland</li>
+                    </ol>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- INFORMASI LOKASI -->
+        <section id="lokasi" class="section-box">
+
+            <h2 class="section-title">Lokasi</h2>
+
+            <div class="location-info">
+
+                <p>
+                    Kambo Highland terletak di kawasan Kambo, Kota Palopo,
+                    Sulawesi Selatan. Lokasinya berada di daerah dataran tinggi
+                    dengan suasana yang sejuk dan pemandangan alam yang menarik.
+                </p>
+
+                <p>
+                    Kambo Highland terletak di Jalan Poros Kambo - Battang,
+                    Kelurahan Kambo, Kecamatan Mungkajang, Kota Palopo,
+                    Sulawesi Selatan.
+                </p>
+
+                <p>
+                    Akses menuju lokasi ini berupa jalanan menanjak khas pegunungan.
+                    Jaraknya sekitar 15 hingga 20 menit berkendara dari pusat Kota Palopo.
+                </p>
+
+            </div>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.2974714542747!2d120.15063847497053!3d-3.0144916969614473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d93e1c6aaaaaaab%3A0x500ac1d8ba610c0b!2sKambo%20Highland!5e0!3m2!1sen!2sid!4v1789290476177!5m2!1sen!2sid"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+
+        </section>
+
+
+        <!-- TABEL INFORMASI -->
+        <section id="informasi" class="section-box">
+
+            <h2 class="section-title">Informasi Wisata</h2>
+
+            <table>
+
+                <caption>
+                    Tabel Informasi Umum Kambo Highland Palopo
+                </caption>
+
+                <colgroup>
+                    <col>
+                    <col span="2">
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Kategori</th>
+                        <th scope="col" colspan="2">Keterangan</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td rowspan="2">Jam Operasional</td>
+                        <td>Weekday</td>
+                        <td>06.00 - 18.00 WITA</td>
+                    </tr>
+
+                    <tr>
+                        <td>Weekend</td>
+                        <td>05.30 - 19.00 WITA</td>
+                    </tr>
+
+                    <tr>
+                        <td>Harga Tiket</td>
+                        <td colspan="2">
+                            Rp 15.000 (weekday) /
+                            Rp 20.000 (weekend) per orang
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Biaya Parkir</td>
+                        <td colspan="2">
+                            Rp 5.000 (motor) /
+                            Rp 10.000 (mobil)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Sewa Tenda</td>
+                        <td colspan="2">
+                            Rp 75.000 / malam
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Fasilitas</td>
+                        <td colspan="2">
+                            Toilet umum, musholla, warung makan,
+                            area parkir, gazebo
+                        </td>
+                    </tr>
+
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3">
+                            Kontak Pengelola: 0812-3456-7890
+                        </td>
+                    </tr>
+                </tfoot>
+
+            </table>
+
+        </section>
+
+
+        <!-- FORMULIR -->
+        <section id="kontak" class="section-box">
+
+            <h2 class="section-title">Formulir Reservasi &amp; Kontak</h2>
+
+            <form>
+
+                <fieldset>
+
+                    <legend>Data Pengunjung</legend>
+
+                    <label for="nama">Nama Lengkap:</label>
+                    <input type="text"
+                           id="nama"
+                           placeholder="Alisya"
+                           required>
+
+                    <label for="email">Alamat Email:</label>
+                    <input type="email"
+                           id="email"
+                           placeholder="alisyanad757@gmail.com"
+                           required>
+
+                    <label for="telepon">Nomor Telepon:</label>
+                    <input type="tel"
+                           id="telepon"
+                           placeholder="08xxxxxxxxxx">
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <legend>Detail Kunjungan</legend>
+
+                    <label for="tanggal">Tanggal Kunjungan:</label>
+                    <input type="date"
+                           id="tanggal"
+                           required>
+
+                    <label for="jumlah">Jumlah Pengunjung:</label>
+                    <input type="number"
+                           id="jumlah"
+                           min="1"
+                           required>
+
+                    <label>Pilihan Aktivitas:</label>
+
+                    <br><br>
+
+                    <input type="radio"
+                           id="trekking"
+                           name="aktivitas">
+
+                    <label for="trekking">Trekking</label>
+
+                    <input type="radio"
+                           id="camping"
+                           name="aktivitas">
+
+                    <label for="camping">Berkemah</label>
+
+                    <input type="radio"
+                           id="foto"
+                           name="aktivitas">
+
+                    <label for="foto">Berburu Foto</label>
+
+                    <input type="radio"
+                           id="lainnya"
+                           name="aktivitas">
+
+                    <label for="lainnya">Lainnya</label>
+
+                    <br><br>
+
+                    <label for="tenda">Sewa Tenda?</label>
+
+                    <input type="checkbox"
+                           id="tenda">
+
+                    <br><br>
+
+                    <label for="asal">Asal Kota:</label>
+
+                    <select id="asal" name="asal">
+
+                        <option value="Palopo">Palopo</option>
+                        <option value="Luwu">Luwu</option>
+                        <option value="Makassar">Makassar</option>
+                        <option value="Lainnya">Lainnya</option>
+
+                    </select>
+
+                </fieldset>
+
+
+                <label for="pesan">Pesan Tambahan:</label>
+
+                <textarea
+                    id="pesan"
+                    name="pesan"
+                    rows="4"
+                    placeholder="Tuliskan pertanyaan atau permintaan khusus">
+                </textarea>
+
+                <input type="submit" value="Kirim Reservasi">
+
+            </form>
+
+        </section>
+
+
+        <!-- MULTIMEDIA -->
+        <section id="multimedia" class="section-box">
+
+            <h2 class="section-title">Multimedia Kambo Highland</h2>
+
+            <div class="media-container">
+
+                <div class="media-box">
+
+                    <h3>Video Kambo Highland</h3>
+
+                    <video controls>
+                        <source src="kambo vid 1.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+
+
+                <div class="media-box">
+
+                    <h3>Audio</h3>
+
+                    <audio controls>
+                        <source src="kambo audio.mp3" type="audio/mpeg">
+                    </audio>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            Kambo Highland - Negeri di Atas Awan,
+            Palopo, Sulawesi Selatan
+        </p>
+
+        <p>
+            Email: kambohighland@gmail.com |
+            Telepon: 0812-3456-7890 |
+            Instagram: @kambohighland
+        </p>
+
+        <p>
+            &copy; 2026 Kambo Highland.
+            Dibuat oleh Alisya Nadhifa Raihani.
+            Tugas Praktikum CSS.
+        </p>
+
+    </footer>
+
+</body>
+</html>
